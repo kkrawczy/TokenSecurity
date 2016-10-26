@@ -1,12 +1,19 @@
-*.class
+.classpath
+.project
+.idea
+*.iml
+.settings
+.directory
+/target
+*.log*
+src/main/static/
+/logback.xml
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Docker
+docker/**/*.env
+docker/mysql/data.sql
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# OS X
+.DS_Store
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+/application*.yml
