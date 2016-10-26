@@ -14,13 +14,13 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private ApiTokenFilter ApiTokenFilter;
+    private ApiTokenFilter apiTokenFilter;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.anonymous().disable()
             .csrf().disable()
-            .addFilterBefore(ApiTokenFilter, BasicAuthenticationFilter.class);
+            .addFilterBefore(apiTokenFilter, BasicAuthenticationFilter.class);
     }
 
 }
